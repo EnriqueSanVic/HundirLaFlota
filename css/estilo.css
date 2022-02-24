@@ -1,0 +1,319 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+
+    font-family: 'Bebas Neue', cursive;
+}
+
+body{
+   
+    background-image: url("../img/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    
+}
+
+h3, button{
+    font-family: 'Bebas Neue', cursive;
+    color: white;
+}
+
+h3{
+    text-shadow:2px 2px black;
+    letter-spacing: 4px;
+}
+
+button{
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button#btnSonido{
+
+    position: fixed;
+
+    width: fit-content;
+    height: fit-content;
+
+    cursor:grab;
+
+    background-color:transparent;
+}
+
+div.contenedor{
+
+    position: relative;
+
+    overflow: hidden;
+    
+    margin: auto;
+
+    margin-top: 40px;
+
+    background-color: rgba(30,30,30,0.5);
+
+    border: solid black 5px;
+
+    border-radius: 5%;
+
+    text-align: center;
+
+    display: block;
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: opacity 0.7s linear;
+
+}
+
+.centrarElemento{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h3.subtitulo{
+
+    margin-top: 25px;
+    font-size: 25px;
+
+}
+
+select.seleccionador{
+
+    width: 150px;
+
+    height: 45px;
+
+    font-size: 25px;
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    border: solid black 4px;
+
+    border-radius: 5%;
+}
+
+input.inputFormulario, select{
+    color: white;
+    background-color: black;
+    border: solid white 4px;
+}
+
+input.inputFormulario{
+
+    width: 200px;
+    height: 30px;
+
+    font-size: 20px;
+    text-align: center;
+
+    margin-top: 20px;
+
+    
+
+    border-radius: 5%;
+
+}
+
+button.botonFormulario{
+
+    width: 150px;
+    height: fit-content;
+
+    padding: 5px;
+
+    font-size: 25px;
+
+    margin-top: 20px;
+
+    background-color: black;
+
+    border: solid white 4px;
+
+    border-radius: 7%;
+
+}
+
+button.botonFormulario:hover{
+
+    background-color: white;
+    border-color: black;
+    color: black;
+
+}
+
+
+/*Zona TABLERO*/
+
+.contenedorTablero{
+
+    width: 400px;
+    height: 400px;
+
+    margin: auto;
+    margin-top: 20px;
+
+    border: solid black 6px;
+
+    background-color: rgb(113, 145, 206);
+
+    display: grid;
+
+}
+
+.celda{
+
+    width: auto;
+    height: auto;
+
+    border: solid black 1px;
+    
+    background-color: rgba(44, 8, 143, 0.5);
+
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+    border-collapse: collapse;
+
+
+}
+
+/*Es una clase solo para las celdas visibles*/
+.celdaVisible{
+    background-color: bisque;
+}
+
+.celdaVisible:hover{
+    background-color: rgb(184, 150, 99);
+}
+
+
+/*Zona CONTRINCANTES*/
+
+div.cuadroContrincantes{
+
+    position: relative;
+
+    width: 80%;
+
+    height: fit-content;
+
+    border: solid white 4px;
+
+    padding: 5px;
+    margin-top: 10px;
+
+    display: inline-flex;
+
+}
+
+div.contrincante{
+
+    width: 100%;
+
+    height: 20px;
+
+    background-color: bisque;
+    border: solid rgb(85, 85, 85) 4px;
+
+    border-collapse: collapse;
+    padding: 10px;
+
+    font-size: 25px;
+
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    display: flex;
+    justify-content: center; /* align horizontal */
+    align-items: center; /* align vertical */
+
+}
+
+div.contrincante:hover{
+    background-color: rgb(173, 152, 126);
+}
+
+div.contrincanteSeleccionado{
+
+    background-color:rgb(235, 191, 72);
+    border-color: rgb(255, 123, 0);
+
+}
+
+div.contrincanteSeleccionado:hover{
+
+    background-color:rgb(235, 191, 72);
+
+}
+
+div.areaTableroJuego{
+
+    position: relative;
+
+    width: fit-content;
+    height: fit-content;
+
+    text-align: center;
+
+    margin-top: 5px;
+
+
+
+}
+
+p.tituloTablero{
+
+    position: relative;
+
+    width: fit-content;
+    height: fit-content;
+
+    margin: auto;
+
+    top: 8px;
+    
+    font-size: 24px;
+
+    font-weight: bold;
+
+    font-family: 'Orbitron', sans-serif;
+
+    color: white;
+
+}
+
+div.pantallaOpaca{
+
+    position: absolute;
+
+    top: 0px;
+    left: 0px;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: grey;
+
+
+}
